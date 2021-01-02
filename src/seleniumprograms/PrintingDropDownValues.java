@@ -9,7 +9,7 @@ public class PrintingDropDownValues extends ReusableSeleniumScript {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		launchbrowser("chrome");
+		launchBrowser("chrome");
 		openurl("https://candidate.psiexams.com/catalog/displayagencylicenses.jsp?catalogID=334");
 		List<WebElement> sponsorname=driver.findElements(By.xpath("//*[@id=\"c0\"]")); //findElements it is going to give the list of the WebElements
 	for(int i=0;i<sponsorname.size();i++) {

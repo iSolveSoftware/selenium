@@ -3,6 +3,7 @@ package seleniumprograms;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,13 +16,15 @@ import org.sikuli.script.Pattern;
 import org.sikuli.script.Screen;
 
 public class ReusableSeleniumScript {
-	static WebDriver driver;
+	protected static WebDriver driver;
 
-	public static void launchbrowser(String browsername) throws InterruptedException {
+	public static void launchBrowser(String browsername) throws InterruptedException {
 		// TODO Auto-generated method stub
 		if(browsername.equalsIgnoreCase("chrome")) {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\parma\\Downloads\\chromedriver.exe");
 		 driver = new ChromeDriver();
+	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		}else if(browsername.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver","C:\\Users\\parma\\Downloads\\geckodriver.exe");
 			 driver=new FirefoxDriver();
