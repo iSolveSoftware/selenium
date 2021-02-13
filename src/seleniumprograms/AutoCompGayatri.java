@@ -9,7 +9,7 @@ public class AutoCompGayatri extends ReusableSeleniumScript {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		launchbrowser("chrome");
+		launchBrowser("chrome");
 		openurl("https://www.bing.com/");
 		Thread.sleep(8000); // Code did not work without this command
 		driver.findElement(By.id("sb_form_q")).sendKeys("selenium");

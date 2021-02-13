@@ -9,7 +9,7 @@ public class AutoComplete extends ReusableSeleniumScript {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		launchbrowser("chrome");
+		launchBrowser("chrome");
 		driver.get("https://www.flipkart.com/");
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/button")).click();			
 		driver.getWindowHandles();

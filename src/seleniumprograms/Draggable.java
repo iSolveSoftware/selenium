@@ -12,7 +12,7 @@ public class Draggable extends ReusableSeleniumScript {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		launchbrowser();
+		quitbrowser();
 		//driver.get("https://jqueryui.com/"); making it reusable with OpenUrl
 		openurl("https://jqueryui.com/");
 		Thread.sleep(3000);
